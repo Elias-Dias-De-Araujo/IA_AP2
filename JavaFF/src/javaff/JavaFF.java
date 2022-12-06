@@ -75,12 +75,6 @@ public class JavaFF
 		EPSILON = EPSILON.setScale(2,BigDecimal.ROUND_HALF_EVEN);
 		MAX_DURATION = MAX_DURATION.setScale(2,BigDecimal.ROUND_HALF_EVEN);
 		
-		String one = args[0]; //=="one"
-    	String two = args[1]; //=="two"
-
-		args[0] = "problems/rovers/domain.pddl";
-		args[1] = "problems/rovers/pfile12";
-
 		generator = new Random();
 		
 		if (args.length < 2) {

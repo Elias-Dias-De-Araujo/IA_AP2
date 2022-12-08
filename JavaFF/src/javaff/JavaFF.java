@@ -177,7 +177,7 @@ public class JavaFF
     	infoOutput.println("Performing Breadth First (blind) search...");
     	State goalState;		
     	// create a Breadth-First Searcher
-    	BreadthA_star BFS = new BreadthA_star(initialState);
+    	BestFirstSearch BFS = new BestFirstSearch(initialState);
     	// ... change to using the 'all actions' neighbourhood (a null filter, as it removes nothing)
     	BFS.setFilter(HelpfulFilter.getInstance());
     	// and use that

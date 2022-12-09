@@ -6,18 +6,18 @@ import java.util.Comparator;
 import java.util.TreeSet;
 import java.util.Hashtable;
 
-public class BreadthA_star extends Search{
+public class SearchAStar extends Search{
     	
 	protected Hashtable closed;
 	protected TreeSet open;
 	protected Filter filter = null;
 	
-	public BreadthA_star(State s)
+	public SearchAStar(State s)
     {
 		this(s, new HGValueComparator());
 	}
 
-	public BreadthA_star(State s, Comparator c)
+	public SearchAStar(State s, Comparator c)
     {
 		super(s);
 		setComparator(c);

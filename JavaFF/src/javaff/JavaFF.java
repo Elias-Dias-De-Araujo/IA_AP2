@@ -45,7 +45,7 @@ import javaff.scheduling.JavaFFScheduler;
 import javaff.search.BreadthFirstSearch;
 import javaff.search.Search;
 import javaff.search.BestFirstSearch;
-import javaff.search.BreadthA_star;
+import javaff.search.SearchAStar;
 import javaff.search.EnforcedHillClimbingSearch;
 
 
@@ -177,11 +177,11 @@ public class JavaFF
     	infoOutput.println("Performing Breadth First (blind) search...");
     	State goalState;		
     	// create a Breadth-First Searcher
-    	BestFirstSearch BFS = new BestFirstSearch(initialState);
+    	SearchAStar SA = new SearchAStar(initialState);
     	// ... change to using the 'all actions' neighbourhood (a null filter, as it removes nothing)
-    	BFS.setFilter(HelpfulFilter.getInstance());
+    	SA.setFilter(HelpfulFilter.getInstance());
     	// and use that
-    	goalState = BFS.search();
+    	goalState = SA.search();
     	return goalState; // return the plan ****/
       
     }
